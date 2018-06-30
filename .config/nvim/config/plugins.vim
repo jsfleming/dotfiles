@@ -13,6 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'airblade/vim-gitgutter'
 
 """""""""""
 " Theming "
