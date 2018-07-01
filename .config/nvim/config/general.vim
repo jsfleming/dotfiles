@@ -97,4 +97,13 @@ set undofile
 " Prevent cursor updates
 set guicursor=
 
+" Enabling python3 provider inside virtualenvs
+let g:python3_host_prog='/usr/bin/python3'
 
+" Setting window split locations
+set splitbelow
+set splitright
+
+" Enable code folding
+set foldmethod=indent
+set foldlevel=99
