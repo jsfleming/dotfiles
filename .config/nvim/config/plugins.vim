@@ -39,6 +39,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Python
 Plug 'zchee/deoplete-jedi'
+Plug 'tmhedberg/SimpylFold'
 
 " HTML
 
@@ -77,6 +78,9 @@ let g:neomake_message_highlight = 'Message'
 hi link NeomakeMessage Message
 let g:neomake_informational_highlight = 'Informational'
 hi link NeomakeInfo Info
+
+" SimpylFold
+let g:SimpylFold_docstring_preview = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
