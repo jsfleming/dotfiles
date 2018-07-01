@@ -70,9 +70,12 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 
 " neomake
+let g:neomake_python_enabled_makers = ['pep8', 'pylint']
 let g:neomake_ocaml_enabled_makers = ['merlin']
 let g:neomake_highlight_columns = 0
 let g:neomake_highlight_lines = 1
+
+call neomake#configure#automake('nrwi', 500)
 
 let g:neomake_error_highlight = "TermCursor"
 hi link NeomakeError Error
