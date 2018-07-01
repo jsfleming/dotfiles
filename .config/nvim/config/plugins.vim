@@ -29,6 +29,7 @@ Plug 'slashmili/alchemist.vim'
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
