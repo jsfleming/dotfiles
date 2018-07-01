@@ -11,11 +11,7 @@ Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'zchee/deoplete-jedi'
 
 """""""""""
 " Theming "
@@ -28,13 +24,21 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
 """""""""""""
-" Languages "
+" Languages/Tools "
 """""""""""""
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+" tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 " Java
 
 " C
 
 " Python
+Plug 'zchee/deoplete-jedi'
 
 " HTML
 
