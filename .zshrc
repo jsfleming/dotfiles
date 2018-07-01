@@ -14,6 +14,7 @@ export GIT_EDITOR='nvim'
 # zplug stuff
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug 'mfaerevaag/wd', as:command, use:"wd.sh", hook-load:"wd() { . $ZPLUG_REPOS/mfaerevaag/wd/wd.sh }"
 
 # themes to test out later
 #zplug 'themes/robbyrussell', from:oh-my-zsh, as:theme
