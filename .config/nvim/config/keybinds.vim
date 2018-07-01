@@ -19,3 +19,6 @@ nnoremap <C-S-J> <C-W><C-S-J>
 nnoremap <C-S-K> <C-W><C-S-K>
 nnoremap <C-S-L> <C-W><C-S-L>
 nnoremap <C-S-H> <C-W><C-S-H>
+
+" enable code folding w/ spacebar
+nnoremap <space> za
