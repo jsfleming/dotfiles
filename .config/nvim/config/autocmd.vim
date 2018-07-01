@@ -35,3 +35,13 @@
 "    :au InsertChange,TextChangedI,TextChanged,InsertLeave * update | Neomake
 "    :au BufWrite,BufEnter *.ml execute "MerlinErrorCheck"
 ":aug END
+
+" Enable proper PEP 8 indentation when dealing with Python files
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
