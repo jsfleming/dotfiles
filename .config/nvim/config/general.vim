@@ -13,7 +13,7 @@ set wrap
 set encoding=utf-8
 
 " Allow clipboard
-set clipboard+=unnamedplus
+set clipboard^=unnamedplus
 
 " Hybrid Numbering
 set relativenumber
@@ -85,7 +85,8 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 
 " Set no line wraps
-set nowrap
+"set nowrap
+set textwidth=80
 
 " Set indent rules per filetype
 filetype indent on
