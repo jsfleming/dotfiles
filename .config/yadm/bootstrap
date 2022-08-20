@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# stole a lot of this from https://github.com/woodruffw/dotfiles
+
+function installed {
+  cmd=$(command -v "${1}")
+
+  [[ -n "${cmd}" ]] && [[ -f "${cmd}" ]]
+  return ${?}
+}
+
+function die {
+	echo "Error: $*" >&2
+	exit 1
+}
+
+function ensure {
+	"$@" \
+		|| die "Failed to run '$*'. Aborting."
+}
+
+function install-prerequisites {
+  sudo apt-get update
+  sudo apt-get upgrade
+
+  if ! installed nvim ; then
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo apt-get update
+    sudo apt-get install neovim
+    nvim '+PlugUpdate' '+PlugClean!' '+PlugUpdate' '+qall'
+  fi
+
+  sudo apt-get install python3 python3-dev
+  if ! installed python3 ; then
+    sudo apt-get install python3 python3-dev
+  fi
+
+  if ! installed curl ; then
+    sudo apt-get install curl
+  fi
+
+  if ! installed pyenv ; then
+    curl https://pyenv.run | bash
+    echo 'export PATH=${HOME}/.pyenv/bin:${PATH}' >> $HOME/.bashrc
+    echo 'eval "$(pyenv init -)"' >> $HOME/.bashrc
+    echo 'eval "$(pyenv virtualenv-init -)"' >> $HOME/.bashrc
+  fi
+
+  if ! installed cargo ; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  fi
+
+  if ! installed git ; then
+    sudo apt-install git
+  fi
+}
+
+function setup-directories {
+  if [[ ! -d "$HOME/git" ]] ; then
+    mkdir ~/git
+  fi
+}
+
+install-prerequisites
+setup-directories
